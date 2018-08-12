@@ -29,3 +29,10 @@ PRODUCT_DEVICE := on7xelte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Build properties
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="on7xeltedd-user 7.0 NRD90M G610FDDU1BRG2 release-keys"
+
+# Build fingerprint
+BUILD_FINGERPRINT := samsung/on7xeltedd/on7xelte:7.0/NRD90M/G610FDDU1BRG2:user/release-keys
