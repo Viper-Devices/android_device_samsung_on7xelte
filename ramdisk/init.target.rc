@@ -29,17 +29,22 @@ on boot
 # Permissions for Bluetooth.
     setprop ro.bt.bdaddr_path /efs/bluetooth/bt_addr
     chown bluetooth bluetooth ro.bt.bdaddr_path
-    chown radio bluetooth /efs/bluetooth/bt_addr
+    
+    mkdir /efs/bluetooth 0770 system bluetooth
+    
+    chown system bluetooth /efs/bluetooth
+    chown system bluetooth /efs/bluetooth/bt_addr
+
+    chown bluetooth net_bt_stack ro.bt.bdaddr_path
+    chown radio net_bt_stack /efs/bluetooth/bt_addr
+
+    chmod 0770 /efs/bluetooth
     chmod 0640 /efs/bluetooth/bt_addr
+
     chmod 0660 /sys/class/rfkill/rfkill0/state
-    chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/device/extldo
-
-    chown bluetooth net_bt /dev/ttySAC0
-    chmod 0660 /dev/ttySAC0
-
+    
 # Permissions for Camera
     mkdir /data/camera 0770 media system
     chown system radio /sys/class/camera/rear/rear_camfw
@@ -74,15 +79,17 @@ on boot
     chown system system /sys/class/lcd/panel/lux
 
 # Permissions for Proximity_sensor
+    chown system radio /sys/class/sensors/proximity_sensor/state
     chown system radio /sys/class/sensors/proximity_sensor/raw_data
     chown system radio /sys/class/sensors/proximity_sensor/prox_avg
     chown system radio /sys/class/sensors/proximity_sensor/prox_cal
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
-    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
     chown system radio /sys/class/sensors/proximity_sensor/vendor
     chown system radio /sys/class/sensors/proximity_sensor/name
-    chown system radio /sys/class/sensors/proximity_sensor/prox_trim
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_high
+    chown system radio /sys/class/sensors/proximity_sensor/thresh_low
+    chown system radio /sys/class/sensors/proximity_sensor/barcode_emul_en
     chown system radio /sys/class/sensors/proximity_sensor/prox_offset_pass
+    chown system radio /sys/class/sensors/proximity_sensor/prox_trim
 
 # Permissions for SVC LED
     chown system system /sys/class/sec/led/led_blink
