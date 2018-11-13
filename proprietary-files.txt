@@ -38,7 +38,6 @@ lib/hw/gralloc.exynos5.so
 # Graphics
 # Vulcan and OpenCL are implemented in this file,
 # so we create symlinks in setup-makefiles.sh.
-lib/egl/libGLES_android.so
 vendor/lib/egl/libGLES_mali.so
 
 # Media
