@@ -15,4 +15,4 @@
 
 # Shim
 TARGET_LD_SHIM_LIBS += \
-    /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
+    /system/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
