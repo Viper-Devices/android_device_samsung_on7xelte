@@ -21,14 +21,14 @@ $(call inherit-product, device/samsung/on7xelte/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+$(call inherit-product, vendor/viper/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := bootleg_on7xelte
+PRODUCT_NAME := viper_on7xelte
 PRODUCT_DEVICE := on7xelte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-#FOR OFFICIAL DEVICES
-BOOTLEGGERS_BUILD_TYPE :="Shishufied"
+# Its Official ViperOS
+VIPER_BUILD_TYPE := OFFICIAL
