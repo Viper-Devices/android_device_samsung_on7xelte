@@ -24,13 +24,14 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # Device identifier
-PRODUCT_NAME := aosp_on7xelte
+PRODUCT_NAME := bootleg_on7xelte
 PRODUCT_DEVICE := on7xelte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-CUSTOM_BUILD_TYPE := OFFICIAL
+#FOR OFFICIAL DEVICES
+BOOTLEGGERS_BUILD_TYPE :="Shishufied"
