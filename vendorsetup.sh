@@ -1,1 +1,1 @@
-add_lunch_combo bootleg_on7xelte-userdebug
+add_lunch_combo viper_on7xelte-userdebug
